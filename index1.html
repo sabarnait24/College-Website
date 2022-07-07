@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+</head>
+
+<body>
+    <section class="contact">
+        <div class="content">
+            <div class="a" ><h1><big>Contact me</big></h1></div>
+
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                    <div class="text">
+                        <!--<h3>Address</h3>-->
+                        <span>
+                            <p>Bidhan Pally,Katwa,</p>
+                        </span>
+                        <p> Purba Bardhaman,pin-713130</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </div>
+                    <div class="text">
+                        <!-- <h3>Email</h3> -->
+                        <br>
+                        <p>jayitagarai2001@gmail.com</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                    </div>
+                    <div class="text">
+                        <br>
+                        <!-- <h3>Phone no.</h3> -->
+                        <p>+919832876469</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="contactform">
+                <form onsubmit="sendE(); reset(); return false;">
+                    <h2>Send Message</h2>
+                    <div class="inputbox">
+                        <input type="text" name="" id="name" required="required">
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="email" name="" id="email" required="required">
+
+                        <span>Email</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" name="" id="number" required="required">
+                        <span>Mobile No</span>
+
+                    </div>
+                    <div class="inputbox">
+                        <textarea id="message" required="required"></textarea>
+                        <span>Type your Message ...</span>
+
+                    </div>
+                    <div class="i">
+                        <div class="inputbox">
+                            <input type="submit" value="Send">
+                            <p id="success"></p>
+                        </div>
+                    </div>
+
+                </form>
+
+
+
+            </div>
+        </div>
+
+    </section>
+    <script src="https://smtpjs.com/v3/smtp.js">
+      function sendE(){
+        Email.send({
+    Host : "smtp.gmail.com",
+    Username : "jayitagarai2001@gmail.com",
+    Password : "lwisewsittgkhecy",
+    To : 'jayitagarai2001@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+      }
+
+    </script>
+
+    
+</body>
+
+</html>
